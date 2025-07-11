@@ -70,7 +70,8 @@ print('총 다운로드 가능한 PDF 수:', len(pdf_items))
 ```
 import pdfplumber, layoutparser as lp, tempfile
 
-model = lp.Detectron2LayoutModel('lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config', extra_config=['MODEL.ROI_HEADS.SCORE_THRESH_TEST', 0.5], label_map={0:'Text'})
+model = lp.models.Detectron2LayoutModel('lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config', extra_config=['MODEL.ROI_HEADS.SCORE_THRESH_TEST', 0.5], label_map={0:'Text'})
+
 
 paragraphs = []
 
