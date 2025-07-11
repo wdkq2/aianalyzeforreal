@@ -72,6 +72,7 @@ import pdfplumber, layoutparser as lp, tempfile
 
 model = lp.models.Detectron2LayoutModel('lp://PubLayNet/faster_rcnn_R_50_FPN_3x/config', extra_config=['MODEL.ROI_HEADS.SCORE_THRESH_TEST', 0.5], label_map={0:'Text'})
 
+
 paragraphs = []
 
 for item in pdf_items:
